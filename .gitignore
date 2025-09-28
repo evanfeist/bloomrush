@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds
+dist/
+build/
+.out/
+.cache/
+.vite/
+
+# Mac / IDE
+.DS_Store
+*.swp
+.idea/
+.vscode/
