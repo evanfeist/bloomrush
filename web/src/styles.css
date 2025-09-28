@@ -1,0 +1,19 @@
+body { font-family: system-ui, sans-serif; margin: 0; background: #111; color: #eee; }
+.wrap { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.menu button { margin-right: 8px; padding: 10px 14px; }
+.hud { margin: 8px 0 12px; opacity: 0.85; }
+.players { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 16px; }
+.player { background: #1b1b1b; border-radius: 12px; padding: 12px; }
+.player.current { outline: 2px solid #6cf; }
+.name { font-weight: 700; margin-bottom: 6px; }
+.board { position: relative; width: 300px; }
+.row { display: flex; }
+.cell { width: 48px; height: 48px; border: 1px solid #333; display:flex; align-items:center; justify-content:center; font-size: 20px; }
+.cell.pond { background: #0a2b3e; }
+.cell.bee { box-shadow: inset 0 0 0 2px #ffb703; }
+.cell.weed { background: #2f1f1f; }
+.cell.flooded { background: #1a2730; }
+.controls { margin-top: 12px; }
+.chip { background: #2a2a2a; padding: 4px 8px; border-radius: 14px; margin-left: 6px; }
+.online .row { display:flex; gap:8px; margin-bottom:8px; }
+.overlay { display:none; } /* click layer replaced by prompt for simplicity */
