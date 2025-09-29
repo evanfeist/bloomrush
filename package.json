@@ -1,13 +1,16 @@
 {
-  "name": "bloom-rush",
-  "version": "1.1.0",
+  "name": "bloomrush",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
+  "description": "Bloom Rush — tile-placement game with solo, bot, and online play",
+  "license": "MIT",
   "scripts": {
-    "play": "ts-node src/cli.ts",
+    "dev": "concurrently -n SERVER,WEB -c magenta,cyan \"ts-node-dev --respawn server/ws-server.ts\" \"vite\"",
     "server": "ts-node server/ws-server.ts",
-    "web": "vite",
-    "build:web": "vite build"
+    "play": "ts-node src/game/cli.ts",
+    "build": "vite build",
+    "build:gh": "VITE_BASE=/bloomrush/ vite build",
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -15,12 +18,15 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
     "@types/ws": "^8.5.10",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "typescript": "^5.6.3",
+    "@vitejs/plugin-react": "^4.3.2",
+    "concurrently": "^9.0.1",
     "ts-node": "^10.9.2",
-    "vite": "^5.4.7"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8"
   }
 }
